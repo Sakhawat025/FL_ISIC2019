@@ -1,0 +1,16 @@
+DermaFedNet — best global model (round 9), test set, tta
+
+              precision    recall  f1-score   support
+
+          AK     0.6370    0.4971    0.5584       173
+         BCC     0.8362    0.7985    0.8169       665
+         BKL     0.7265    0.6171    0.6674       525
+          DF     0.7105    0.5625    0.6279        48
+         MEL     0.7363    0.7290    0.7326       904
+          NV     0.8723    0.9336    0.9019      2575
+         SCC     0.5882    0.5556    0.5714       126
+        VASC     0.9302    0.7843    0.8511        51
+
+    accuracy                         0.8172      5067
+   macro avg     0.7547    0.6847    0.7160      5067
+weighted avg     0.8121    0.8172    0.8132      5067

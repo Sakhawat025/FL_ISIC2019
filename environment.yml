@@ -1,0 +1,36 @@
+# Anaconda environment for FL_ISIC2019_Flower.ipynb
+#   conda env create -f environment.yml
+#   conda activate fl-isic
+#
+# Why these versions (checked together, Oct 2026):
+#   - flwr 1.39 needs Python >= 3.11; on Windows its Ray backend only supports Python 3.11-3.12  -> python=3.11
+#   - flwr[simulation]==1.39.0 pins ray==2.55.1
+#   - torch 2.9.1 / torchvision 0.24.1 are a matched pair with CUDA 12.6 wheels
+#
+# GPU choice (change the --extra-index-url line only):
+#   cu126 -> GTX 10xx / 16xx, RTX 20xx / 30xx / 40xx   (NVIDIA driver >= 528 on Windows)  [default]
+#   cu128 -> RTX 50xx (Blackwell) or if you prefer CUDA 12.8                                (driver >= 570)
+#   cpu   -> no NVIDIA GPU (training will be very slow)
+# Uses conda-forge only (avoids the Anaconda "defaults" channel Terms-of-Service prompt).
+
+name: fl-isic
+channels:
+  - conda-forge
+  - nodefaults
+dependencies:
+  - python=3.11
+  - pip
+  - ipykernel          # lets VS Code use this env as a Jupyter kernel
+  - pip:
+      - --extra-index-url https://download.pytorch.org/whl/cu126
+      - torch==2.9.1
+      - torchvision==0.24.1
+      - flwr[simulation]==1.39.0
+      - numpy==2.4.6
+      - pandas==3.0.6
+      - scikit-learn==1.9.1
+      - matplotlib==3.11.2
+      - seaborn==0.13.2
+      - pillow==12.3.0
+      - tqdm==4.70.1
+      - ipywidgets
