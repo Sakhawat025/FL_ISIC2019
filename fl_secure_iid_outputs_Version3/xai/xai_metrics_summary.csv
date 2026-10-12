@@ -1,0 +1,17 @@
+,mean,std,note
+deletion_auc,0.5853821869833155,0.24125411259552504,lower is better
+insertion_auc,0.5746674835869169,0.20432693579303465,higher is better
+ins_minus_del,-0.010714703396398432,0.3048857108392354,higher is better
+avg_drop,50.55682726230746,45.07568048514358,% | lower is better
+inc_conf,13.333333333333334,34.06450522228456,% | higher is better
+gini,0.37376540880381853,0.2708269600714065,higher = sparser map
+entropy,0.922459985396697,0.17900441127123207,lower = more focused
+active_area,0.4812511444091797,0.2985092783365232,fraction of pixels > 0.5
+pred_same_flip,0.9375,0.2435886759231116,stability: closer to 1 is better
+pred_same_noise,0.6125,0.4902530991904312,stability: closer to 1 is better
+flip_pearson,0.7997705585013323,0.2131805014469645,stability: closer to 1 is better
+flip_spearman,0.7694078725925392,0.23795076837386012,stability: closer to 1 is better
+flip_ssim,0.8207034008138505,0.1516776900557089,stability: closer to 1 is better
+noise_pearson,0.3398490517433289,0.4719763660657203,stability: closer to 1 is better
+noise_spearman,0.329724940190868,0.4616401271342723,stability: closer to 1 is better
+noise_ssim,0.4970482473303709,0.30641731287320717,stability: closer to 1 is better

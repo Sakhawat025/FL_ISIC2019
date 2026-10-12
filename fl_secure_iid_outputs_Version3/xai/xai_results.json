@@ -1,0 +1,132 @@
+{
+  "model": "DermaFedNet",
+  "weights": "global_best.pt",
+  "method": "GradCAM",
+  "target_layer": "cbam",
+  "n_images": 240,
+  "summary": {
+    "deletion_auc": {
+      "mean": 0.58538,
+      "std": 0.24125
+    },
+    "insertion_auc": {
+      "mean": 0.57467,
+      "std": 0.20433
+    },
+    "ins_minus_del": {
+      "mean": -0.01071,
+      "std": 0.30489
+    },
+    "avg_drop": {
+      "mean": 50.55683,
+      "std": 45.07568
+    },
+    "inc_conf": {
+      "mean": 13.33333,
+      "std": 34.06451
+    },
+    "gini": {
+      "mean": 0.37377,
+      "std": 0.27083
+    },
+    "entropy": {
+      "mean": 0.92246,
+      "std": 0.179
+    },
+    "active_area": {
+      "mean": 0.48125,
+      "std": 0.29851
+    },
+    "pred_same_flip": {
+      "mean": 0.9375,
+      "std": 0.24359
+    },
+    "pred_same_noise": {
+      "mean": 0.6125,
+      "std": 0.49025
+    },
+    "flip_pearson": {
+      "mean": 0.79977,
+      "std": 0.21318
+    },
+    "flip_spearman": {
+      "mean": 0.76941,
+      "std": 0.23795
+    },
+    "flip_ssim": {
+      "mean": 0.8207,
+      "std": 0.15168
+    },
+    "noise_pearson": {
+      "mean": 0.33985,
+      "std": 0.47198
+    },
+    "noise_spearman": {
+      "mean": 0.32972,
+      "std": 0.46164
+    },
+    "noise_ssim": {
+      "mean": 0.49705,
+      "std": 0.30642
+    }
+  },
+  "method_comparison": {
+    "GradCAM": {
+      "deletion_auc": 0.58308,
+      "insertion_auc": 0.5594,
+      "ins_minus_del": -0.02368,
+      "avg_drop": 47.5878,
+      "inc_conf": 16.25,
+      "gini": 0.33814,
+      "entropy": 0.94164,
+      "active_area": 0.52762
+    },
+    "GradCAM++": {
+      "deletion_auc": 0.55636,
+      "insertion_auc": 0.61707,
+      "ins_minus_del": 0.06071,
+      "avg_drop": 41.62474,
+      "inc_conf": 17.5,
+      "gini": 0.34494,
+      "entropy": 0.96482,
+      "active_area": 0.51208
+    },
+    "XGradCAM": {
+      "deletion_auc": 0.5762,
+      "insertion_auc": 0.56959,
+      "ins_minus_del": -0.00661,
+      "avg_drop": 61.5502,
+      "inc_conf": 11.25,
+      "gini": 0.41294,
+      "entropy": 0.93278,
+      "active_area": 0.3665
+    },
+    "LayerCAM": {
+      "deletion_auc": 0.54887,
+      "insertion_auc": 0.61186,
+      "ins_minus_del": 0.06298,
+      "avg_drop": 54.55218,
+      "inc_conf": 15.0,
+      "gini": 0.30294,
+      "entropy": 0.98478,
+      "active_area": 0.34049
+    }
+  },
+  "sanity_check": {
+    "classifier head randomised": {
+      "pearson": 0.14851,
+      "spearman": 0.19496,
+      "ssim": 0.41324
+    },
+    "head + transformer + CBAM randomised": {
+      "pearson": 0.07198,
+      "spearman": 0.06134,
+      "ssim": 0.32352
+    },
+    "all weights randomised": {
+      "pearson": 0.02347,
+      "spearman": 0.0041,
+      "ssim": 0.23064
+    }
+  }
+}
